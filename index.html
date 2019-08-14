@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <title>Product Landing Page</title>
+  <style>
+    #header{
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      /*text-align: center;*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: lightgray;
+      min-height: 80px;
+      padding: 4px;
+      flex-wrap: wrap;
+    }
+    @media(max-width: 540px) {
+      #header{justify-content: center;}
+      #sect1>div{flex-wrap: wrap; padding: 10px 0 30px 0;}
+    }
+    .header-logo{
+      display: flex;
+      align-items: center;
+      flex: 0 0 264px;}
+    .header-img-wrap{width: 64px;}
+    .logo-title{font-size: 200%; text-decoration: none; color: black; padding: 4px;}
+    #header-img{
+      display: block;
+      width: 100%;
+      border-radius: 4px;    
+    }
+    #nav-bar{flex: 0 1 220px; display: flex; justify-content: space-between; padding: 0 4px;}
+    .nav-link{text-decoration: none; color: black; padding: 4px;}
+
+    #form-wrap, #sect1, #sect2, #sect3{
+      padding-top: 100px;
+      min-height: calc(100vh - 100px);
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    #form-wrap{
+      justify-content: center;
+      text-align: center;
+    }
+    #form-wrap>h1{margin: 0; padding: 0.25rem;}
+    #form-wrap p{padding: 0.25rem; margin: 0;}
+    #form{padding: 10px;}
+    #form:nth-child(all){
+      width: 100;
+      padding: 10px;
+    }
+    #email{
+      min-width: 200px;
+      padding: .5rem 1rem;
+      border: 1px solid lightgray;
+      border-radius: 6px;
+    }
+    #submit{
+      background-color: yellow;
+      padding: .5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+      border: none;
+    }
+    
+    .sect1-img-wrap{flex: 0 0 128px;}
+    #sect1-img{
+      margin: 4px;
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+    }
+    #sect1>div{display: flex; align-items: center; justify-content: center; padding-bottom: 1rem;}
+    #sect1>div>div:nth-child(2){
+      flex: 0 1 700px;
+      padding: 0 10px;
+    }
+    #sect1 h2{padding: 0; margin: 0;}
+    #sect1 p{padding: 0; margin: 0;}
+    
+    #sect2{
+      display: flex; align-items: center; justify-content: center;
+    }
+    #video-wrap{width: 70vw;}
+    #video{
+      display: block;
+      height: calc(70vw/1.7777);
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: -1px 3px 9px 1px rgba(0,0,0,0.75);
+    }
+    
+    #sect3{
+      justify-content: center;
+      text-align: center;
+    }
+    .item{
+      flex: 1 0 240px;
+      border-radius: 6px;
+      border: 1px solid lightgray;
+      text-align: center;
+      box-shadow: -1px 3px 9px 1px rgba(0,0,0,0.75);
+      margin: .5rem;
+    }
+    .item h3{background-color: gray; padding: 5px; margin: 0;}
+    .item-price{font-weight: bold; font-size: 150%;}
+    .item-choice{
+      font-size: 125%;
+      background-color: orange;
+      padding: .5rem 1rem;
+      margin: .5rem;
+      border-radius: 6px;
+      border: none;
+    }
+    #footer{text-align: right; background-color: lightgray; min-height: 80px; display: flex; justify-content: end; align-items: end; flex-flow: column; padding: 4px;}
+    #footer a{text-decoration: none; color: black; padding: 4px; font-size: 125%;}
+    .copyright{padding: 4px;}
+  </style>
+</head>
+<body id="top">
+  <header id="header">
+    <div class="header-logo">
+      <div class="header-img-wrap">
+        <img id="header-img" src="https://avatars.githubusercontent.com/u/18559447?v=3" alt="header-img">
+      </div>
+      <a href="#top" class="logo-title">Original Pavel</a>
+    </div>
+    <nav id="nav-bar">
+      <a class="nav-link" href="#sect1">Features</a>
+      <a class="nav-link" href="#sect2">How it Works</a>
+      <a class="nav-link" href="#sect3">Pricing</a>
+    </nav>
+  </header>
+  <section id="form-wrap">
+    <form id="form" method="POST" action="https://www.freecodecamp.org/email-submit">
+      <h1>Handcrafted, home-made masterpieces</h1>
+      <p><input id="email" name="email" type="email" placeholder="Enter your email address" required=""></p>
+      <p><input id="submit" name="submit" type="submit">GET STARTED</input></p>
+    </form>
+  </section>
+  <section id="sect1">
+    <div>
+      <div class="sect1-img-wrap">
+        <img id="sect1-img" src="https://avatars.githubusercontent.com/u/18559447?v=3" alt="sect1-img">
+      </div>
+      <div>
+        <h2>Premium Materials</h2>
+        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sect1-img-wrap">
+        <img id="sect1-img" src="https://avatars.githubusercontent.com/u/18559447?v=3" alt="sect1-img">
+      </div>
+      <div>
+        <h2>Fast Shipping</h2>
+        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+      </div>
+    </div>
+    <div>
+      <div class="sect1-img-wrap">
+        <img id="sect1-img" src="https://avatars.githubusercontent.com/u/18559447?v=3" alt="sect1-img">
+      </div>
+      <div>
+        <h2>Quality Assurance</h2>
+        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sect2">
+    <div id="video-wrap">
+      <iframe id="video" src="https://www.youtube.com/embed/V5wiX6nPoQM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+    
+  <section id="sect3">
+    <div class="item">
+      <h3>TENOR TROMBONE</h3>
+      <p class="item-price">$600</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum dolor.</p>
+      <p>Lorem ipsum.</p>
+      <button class="item-choice">SELECT</button>
+    </div>
+    <div class="item">
+      <h3>TENOR TROMBONE</h3>
+      <p class="item-price">$600</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum dolor.</p>
+      <p>Lorem ipsum.</p>
+      <button class="item-choice">SELECT</button>
+    </div>
+    <div class="item">
+      <h3>TENOR TROMBONE</h3>
+      <p class="item-price">$600</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum.</p>
+      <p>Lorem ipsum dolor.</p>
+      <p>Lorem ipsum.</p>
+      <button class="item-choice">SELECT</button>
+    </div>
+  </section>
+  
+  <footer id="footer">
+    <span>
+    <a href="#Privacy">Privacy</a>
+    <a href="#Terms">Terms</a>
+    <a href="#Contact">Contact</a>
+    </span>
+    <span class="copyright">Copyright 2016, Original Trombones</span>
+  </footer>
+</body>
+</html>

@@ -1,8 +1,9 @@
 fcc productLandingPage
 =================
 
-[on Glitch]()
-[on Gh-pages]()
+[on Glitch](https://sleet-tidy-santanaraptor.glitch.me/)
+
+[on Gh-pages](https://woodsleaf.github.io/productLandingPage/)
 
 
 Your Project
